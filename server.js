@@ -17,15 +17,7 @@ requireDir("./src/models")
 
 const Product = mongoose.model('Product')
 
-//Criação de rota
-app.get("/", (req, res) => {
-    Product.create({
-        title: 'React Native',
-        description: 'Learn build native apps with React',
-        url: 'https://github.com/facebook/react-native'
-    })
-    
-    return res.send('Hello World')
-})
+//Rotas
+app.use('/api', require('./src/routes'))
 
 app.listen('3000')
