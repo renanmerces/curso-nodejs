@@ -5,5 +5,6 @@ const ProductController = require('./controllers/ProductController')
 
 //Criação de rota
 routes.get("/products", ProductController.index)
+routes.post("/products", ProductController.create)
 
 module.exports = routes
